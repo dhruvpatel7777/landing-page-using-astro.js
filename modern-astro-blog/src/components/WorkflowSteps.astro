@@ -1,0 +1,134 @@
+---
+// WorkflowSteps.astro
+---
+
+<section class="section workflow-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">SIMPLIFIED WORKFLOW</span>
+      <h2 class="section-title">Zero setup headaches. Up and running in under 3 minutes.</h2>
+      <p class="section-desc">
+        No complicated Kubernetes YAML or heavy agent orchestrators required. Pulse plugs right into your existing git flow.
+      </p>
+    </div>
+
+    <div class="steps-grid">
+      <!-- Step 1 -->
+      <div class="glass-card step-card">
+        <div class="step-badge">STEP 01</div>
+        <div class="step-icon-wrap icon-indigo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </div>
+        <h3 class="step-title">Connect Repository & Policy</h3>
+        <p class="step-text">
+          Link your GitHub, GitLab, or Bitbucket repo with one click. Configure custom policy guardrails: define which directories require human sign-off and which can be autonomously merged.
+        </p>
+        <div class="step-metric">Time required: <strong>45 seconds</strong></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="glass-card step-card">
+        <div class="step-badge">STEP 02</div>
+        <div class="step-icon-wrap icon-cyan">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3 class="step-title">Autonomous AST Synthesis</h3>
+        <p class="step-text">
+          Pulse builds a living multi-service dependency matrix. When code updates happen, background agents detect bottlenecks, update deprecated calls, and author 100% typed PRs.
+        </p>
+        <div class="step-metric">Continuous: <strong>Sub-second checks</strong></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="glass-card step-card">
+        <div class="step-badge">STEP 03</div>
+        <div class="step-icon-wrap icon-emerald">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="step-title">Verified Canary Rollout</h3>
+        <p class="step-text">
+          Deploy changes through automated progressive delivery. Pulse monitors microsecond latency and error spikes. If anything regresses, it rolls back in under 50ms automatically.
+        </p>
+        <div class="step-metric">Safety: <strong>99.999% Zero Downtime</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .workflow-section {
+    position: relative;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step-card {
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .step-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .step-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon-indigo { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+  .icon-cyan { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
+  .icon-emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+
+  .step-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+    margin-bottom: 0.75rem;
+  }
+
+  .step-text {
+    font-size: 0.94rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .step-metric {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .step-metric strong {
+    color: var(--brand-emerald);
+  }
+</style>
+

@@ -1,0 +1,283 @@
+---
+// Navbar.astro
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="navbar-wrapper" id="main-header">
+  <div class="container navbar-inner">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-logo" aria-label="PulseAI Home">
+      <div class="logo-icon-wrap">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+          <rect width="32" height="32" rx="8" fill="url(#brand-grad)" />
+          <path d="M7 16H11L14 8L18 24L21 16H25" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="brand-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366F1"/>
+              <stop offset="0.5" stop-color="#8B5CF6"/>
+              <stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <span class="brand-name">Pulse<span class="brand-accent">AI</span></span>
+      <span class="version-pill">v3.4</span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-nav" aria-label="Main Navigation">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#architecture" class="nav-link">Architecture</a>
+      <a href="#calculator" class="nav-link">ROI Calculator</a>
+      <a href="#testimonials" class="nav-link">Reviews</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </nav>
+
+    <!-- Right Controls -->
+    <div class="nav-actions">
+      <ThemeToggle />
+      <a href="#pricing" class="btn btn-ghost nav-signin">Sign In</a>
+      <a href="#pricing" class="btn btn-primary nav-cta">
+        <span>Get Started</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <nav class="mobile-nav-links">
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#architecture" class="mobile-nav-link">Architecture</a>
+        <a href="#calculator" class="mobile-nav-link">ROI Calculator</a>
+        <a href="#testimonials" class="mobile-nav-link">Customer Reviews</a>
+        <a href="#pricing" class="mobile-nav-link">Pricing & Plans</a>
+        <a href="#faq" class="mobile-nav-link">Frequently Asked Questions</a>
+      </nav>
+      <div class="mobile-drawer-cta">
+        <a href="#pricing" class="btn btn-primary" style="width: 100%;">Get Started Free</a>
+        <a href="#pricing" class="btn btn-secondary" style="width: 100%;">Sign In</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .navbar-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text-highlight);
+  }
+
+  .logo-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+  }
+
+  .brand-accent {
+    color: var(--brand-accent);
+  }
+
+  .version-pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-full);
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--brand-primary);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    letter-spacing: 0.02em;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .nav-link {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: var(--text-highlight);
+  }
+
+  .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--brand-primary);
+    border-radius: 2px;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-signin {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-cta {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .mobile-toggle-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-medium);
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .hamburger-bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all var(--transition-fast);
+  }
+
+  .mobile-drawer {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 13, 22, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 99;
+    padding: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+  }
+
+  [data-theme="light"] .mobile-drawer {
+    background: rgba(248, 250, 252, 0.97);
+  }
+
+  .mobile-drawer.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobile-drawer-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .desktop-nav {
+      display: none;
+    }
+    .nav-signin {
+      display: none;
+    }
+    .mobile-toggle-btn {
+      display: flex;
+    }
+    .mobile-drawer {
+      display: block;
+    }
+  }
+</style>
+
+<script is:inline>
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const links = drawer?.querySelectorAll('.mobile-nav-link');
+
+  function toggleMenu() {
+    const isOpen = drawer.classList.contains('open');
+    if (isOpen) {
+      drawer.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    } else {
+      drawer.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  toggle?.addEventListener('click', toggleMenu);
+  links?.forEach(link => {
+    link.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+

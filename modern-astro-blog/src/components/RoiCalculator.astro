@@ -1,0 +1,326 @@
+---
+// RoiCalculator.astro
+---
+
+<section class="section" id="calculator">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">MEASURABLE IMPACT</span>
+      <h2 class="section-title">Calculate your team's autonomous engineering ROI</h2>
+      <p class="section-desc">
+        See how much time, money, and cognitive fatigue your organization reclaims by automating maintenance, CI bottlenecks, and code refactors.
+      </p>
+    </div>
+
+    <div class="glass-card calculator-card">
+      <div class="calc-inputs">
+        <h3 class="calc-box-title">Your Organization Parameters</h3>
+
+        <!-- Team Size Slider -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="team-size-slider">Engineering Team Size</label>
+            <span class="slider-val"><strong id="team-size-display">25</strong> engineers</span>
+          </div>
+          <input
+            type="range"
+            id="team-size-slider"
+            class="range-slider"
+            min="2"
+            max="150"
+            value="25"
+            step="1"
+          />
+          <div class="slider-marks">
+            <span>2</span>
+            <span>50</span>
+            <span>100</span>
+            <span>150+</span>
+          </div>
+        </div>
+
+        <!-- Weekly Hours on DevOps Slider -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="hours-slider">Hours spent per engineer on DevOps & bug triage / week</label>
+            <span class="slider-val"><strong id="hours-display">7</strong> hours/wk</span>
+          </div>
+          <input
+            type="range"
+            id="hours-slider"
+            class="range-slider"
+            min="2"
+            max="20"
+            value="7"
+            step="1"
+          />
+          <div class="slider-marks">
+            <span>2 hrs</span>
+            <span>8 hrs</span>
+            <span>14 hrs</span>
+            <span>20 hrs</span>
+          </div>
+        </div>
+
+        <!-- Hourly Blended Cost -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="rate-slider">Blended Hourly Developer Rate</label>
+            <span class="slider-val">$<strong id="rate-display">95</strong> / hour</span>
+          </div>
+          <input
+            type="range"
+            id="rate-slider"
+            class="range-slider"
+            min="50"
+            max="200"
+            value="95"
+            step="5"
+          />
+          <div class="slider-marks">
+            <span>$50/hr</span>
+            <span>$100/hr</span>
+            <span>$150/hr</span>
+            <span>$200/hr</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card -->
+      <div class="calc-results">
+        <div class="results-badge">PROJECTED ANNUAL GAINS</div>
+
+        <div class="result-stat-group">
+          <div class="result-number text-gradient" id="savings-display">$587,100</div>
+          <div class="result-label">Estimated Annual Developer Cost Reclaimed</div>
+        </div>
+
+        <div class="results-subgrid">
+          <div class="sub-stat">
+            <div class="sub-number" id="hours-saved-display">6,180</div>
+            <div class="sub-label">Engineer Hours Saved / Yr</div>
+          </div>
+          <div class="sub-stat">
+            <div class="sub-number" id="velocity-display">+4.8x</div>
+            <div class="sub-label">Faster Deployment Cadence</div>
+          </div>
+        </div>
+
+        <div class="results-cta">
+          <a href="#pricing" class="btn btn-primary" style="width: 100%;">
+            <span>Claim These Savings with Pulse</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <p class="results-disclaimer">Based on average client results across 450+ production deployments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .calculator-card {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    max-width: 1050px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+  }
+
+  @media (max-width: 900px) {
+    .calculator-card {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .calc-inputs {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .calc-box-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+    margin-bottom: 0.5rem;
+  }
+
+  .slider-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .slider-val {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+  }
+
+  .slider-val strong {
+    color: var(--brand-accent);
+    font-size: 1.15rem;
+  }
+
+  .range-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--brand-primary);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+    border: 2px solid #ffffff;
+    transition: transform 0.15s ease;
+  }
+
+  .range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+
+  .slider-marks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  /* Results Panel */
+  .calc-results {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%), var(--bg-tertiary);
+    border-left: 1px solid var(--border-subtle);
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  [data-theme="light"] .calc-results {
+    background: #f1f5f9;
+  }
+
+  @media (max-width: 900px) {
+    .calc-results {
+      border-left: none;
+      border-top: 1px solid var(--border-subtle);
+    }
+  }
+
+  .results-badge {
+    display: inline-block;
+    align-self: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--brand-primary);
+    background: rgba(99, 102, 241, 0.15);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-full);
+    margin-bottom: 1.5rem;
+  }
+
+  .result-number {
+    font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+    font-weight: 850;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+
+  .result-label {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    max-width: 280px;
+    margin: 0 auto 2rem auto;
+  }
+
+  .results-subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 1.5rem;
+  }
+
+  .sub-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-highlight);
+    margin-bottom: 0.25rem;
+  }
+
+  .sub-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .results-disclaimer {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+  }
+</style>
+
+<script is:inline>
+  const teamInput = document.getElementById('team-size-slider');
+  const hoursInput = document.getElementById('hours-slider');
+  const rateInput = document.getElementById('rate-slider');
+
+  const teamDisplay = document.getElementById('team-size-display');
+  const hoursDisplay = document.getElementById('hours-display');
+  const rateDisplay = document.getElementById('rate-display');
+
+  const savingsDisplay = document.getElementById('savings-display');
+  const hoursSavedDisplay = document.getElementById('hours-saved-display');
+  const velocityDisplay = document.getElementById('velocity-display');
+
+  function calculateRoi() {
+    const team = parseInt(teamInput.value, 10) || 25;
+    const hours = parseInt(hoursInput.value, 10) || 7;
+    const rate = parseInt(rateInput.value, 10) || 95;
+
+    // Pulse automates approximately 68% of manual toil hours
+    const weeklyHoursSaved = team * hours * 0.68;
+    const annualHoursSaved = Math.round(weeklyHoursSaved * 48); // 48 work weeks
+    const annualSavings = Math.round(annualHoursSaved * rate);
+
+    teamDisplay.textContent = team;
+    hoursDisplay.textContent = hours;
+    rateDisplay.textContent = rate;
+
+    savingsDisplay.textContent = '$' + annualSavings.toLocaleString();
+    hoursSavedDisplay.textContent = annualHoursSaved.toLocaleString();
+
+    let speedup = 3.0 + (team * 0.05);
+    if (speedup > 8.5) speedup = 8.5;
+    velocityDisplay.textContent = '+' + speedup.toFixed(1) + 'x';
+  }
+
+  teamInput?.addEventListener('input', calculateRoi);
+  hoursInput?.addEventListener('input', calculateRoi);
+  rateInput?.addEventListener('input', calculateRoi);
+</script>
+

@@ -1,0 +1,489 @@
+---
+// BentoGrid.astro
+---
+
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">ARCHITECTURAL EXCELLENCE</span>
+      <h2 class="section-title">Engineered for extreme performance and enterprise trust</h2>
+      <p class="section-desc">
+        Every component of Pulse is crafted with deep systems intelligence, giving your engineering organization superpowers without sacrificing safety or control.
+      </p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Card 1: Wide 2-Col Card (Autonomous Refactoring) -->
+      <div class="glass-card bento-card bento-wide">
+        <div class="bento-content">
+          <div class="card-icon-wrap icon-indigo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          </div>
+          <h3 class="bento-title">Autonomous Neural AST Refactoring</h3>
+          <p class="bento-desc">
+            Pulse inspects your codebase's Abstract Syntax Tree in real-time, detecting concurrency bottlenecks, memory leaks, and type hazards—generating mathematically verified pull requests automatically.
+          </p>
+          <div class="bento-pills">
+            <span class="tech-pill">AST Analysis</span>
+            <span class="tech-pill">Formal Verification</span>
+            <span class="tech-pill">Zero-Regression</span>
+          </div>
+        </div>
+
+        <!-- Visual Code Diff Simulation -->
+        <div class="bento-visual">
+          <div class="diff-container">
+            <div class="diff-header">
+              <span class="diff-file">auth_dispatcher.ts</span>
+              <span class="diff-status">+340% throughput</span>
+            </div>
+            <div class="diff-body">
+              <div class="diff-line diff-del">
+                <span class="diff-symbol">-</span>
+                <code>const lock = await mutex.acquire(); // High contention</code>
+              </div>
+              <div class="diff-line diff-add">
+                <span class="diff-symbol">+</span>
+                <code>const channel = ringBuffer.dispatchLockless(event);</code>
+              </div>
+              <div class="diff-line diff-ctx">
+                <span class="diff-symbol"> </span>
+                <code>metrics.gauge('latency_p99', channel.drainDuration);</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Single Col (Sub-15ms Edge Execution) -->
+      <div class="glass-card bento-card">
+        <div class="card-icon-wrap icon-cyan">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <h3 class="bento-title">Sub-15ms Edge Runtimes</h3>
+        <p class="bento-desc">
+          Global zero-cold-start edge workers deployed across 310+ worldwide points of presence with instant replication.
+        </p>
+
+        <div class="latency-meter">
+          <div class="latency-header">
+            <span>Global Edge Ping</span>
+            <strong class="text-cyan">13.4 ms</strong>
+          </div>
+          <div class="meter-bar-track">
+            <div class="meter-bar-fill" style="width: 92%;"></div>
+          </div>
+          <div class="latency-footer">
+            <span>Tokyo: 14ms</span>
+            <span>Frankfurt: 11ms</span>
+            <span>Virginia: 8ms</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Single Col (SOC2 & Zero-Trust) -->
+      <div class="glass-card bento-card">
+        <div class="card-icon-wrap icon-emerald">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="bento-title">SOC2 & Isolated Zero-Trust</h3>
+        <p class="bento-desc">
+          Your source code never trains public foundation models. Complete air-gapped VPC deployment with hardware-level isolation.
+        </p>
+
+        <div class="security-badges">
+          <div class="sec-badge">
+            <span class="sec-dot"></span>
+            <span>SOC2 Type II Certified</span>
+          </div>
+          <div class="sec-badge">
+            <span class="sec-dot"></span>
+            <span>HIPAA & GDPR Ready</span>
+          </div>
+          <div class="sec-badge">
+            <span class="sec-dot"></span>
+            <span>256-Bit Hardware Enclaves</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Single Col (Realtime Telemetry) -->
+      <div class="glass-card bento-card">
+        <div class="card-icon-wrap icon-amber">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </div>
+        <h3 class="bento-title">Deep Trace Telemetry</h3>
+        <p class="bento-desc">
+          Instant distributed OpenTelemetry tracing captures bottlenecks at the microsecond boundary with root-cause causation.
+        </p>
+
+        <div class="sparkline-box">
+          <div class="sparkline-header">
+            <span>Concurrency Load</span>
+            <span class="spark-val">Stable 99.98%</span>
+          </div>
+          <div class="spark-visual">
+            <div class="spark-bar" style="height: 35%;"></div>
+            <div class="spark-bar" style="height: 50%;"></div>
+            <div class="spark-bar" style="height: 45%;"></div>
+            <div class="spark-bar" style="height: 70%;"></div>
+            <div class="spark-bar" style="height: 60%;"></div>
+            <div class="spark-bar" style="height: 85%;"></div>
+            <div class="spark-bar" style="height: 75%;"></div>
+            <div class="spark-bar active" style="height: 95%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: Wide 2-Col Card (Universal Git Integration) -->
+      <div class="glass-card bento-card bento-wide">
+        <div class="bento-content">
+          <div class="card-icon-wrap icon-rose">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="bento-title">Zero-Configuration Git Toolchain</h3>
+          <p class="bento-desc">
+            Install once with your favorite package manager or CI provider. Pulse hooks directly into GitHub Actions, GitLab CI, Bitbucket, or your custom Kubernetes pipeline.
+          </p>
+          <div class="cli-box">
+            <span class="cli-prompt">$</span>
+            <span class="cli-cmd">npx pulse-engine@latest init --preset=production</span>
+            <button type="button" class="cli-copy-btn" id="bento-copy-btn" title="Copy install command">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="bento-visual stack-grid-visual">
+          <div class="stack-badge">Astro.js</div>
+          <div class="stack-badge">TypeScript</div>
+          <div class="stack-badge">React & Next</div>
+          <div class="stack-badge">Rust</div>
+          <div class="stack-badge">Go Runtimes</div>
+          <div class="stack-badge">Docker & K8s</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bento-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bento-wide {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  @media (max-width: 992px) {
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+    .bento-wide {
+      grid-column: span 1;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .icon-indigo { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+  .icon-cyan { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
+  .icon-emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+  .icon-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+  .icon-rose { background: rgba(244, 63, 94, 0.15); color: #fb7185; }
+
+  .bento-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.015em;
+  }
+
+  .bento-desc {
+    font-size: 0.94rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .bento-pills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tech-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-medium);
+    color: var(--text-muted);
+  }
+
+  /* Code Diff Simulation */
+  .diff-container {
+    background: #090d16;
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .diff-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.85rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+  }
+
+  .diff-status {
+    color: var(--brand-emerald);
+    font-weight: 700;
+  }
+
+  .diff-body {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .diff-line {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    line-height: 1.4;
+  }
+
+  .diff-symbol {
+    font-weight: 700;
+  }
+
+  .diff-del {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+  }
+
+  .diff-add {
+    background: rgba(16, 185, 129, 0.15);
+    color: #86efac;
+  }
+
+  .diff-ctx {
+    color: #94a3b8;
+  }
+
+  /* Latency Gauge */
+  .latency-meter {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .latency-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+  }
+
+  .text-cyan { color: #06b6d4; }
+
+  .meter-bar-track {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-primary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 0.65rem;
+  }
+
+  .meter-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #06b6d4);
+    border-radius: var(--radius-full);
+  }
+
+  .latency-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  /* Security Badges */
+  .security-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 1rem;
+  }
+
+  .sec-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    padding: 0.55rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .sec-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brand-emerald);
+  }
+
+  /* Sparkline Box */
+  .sparkline-box {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .sparkline-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .spark-val {
+    color: var(--brand-emerald);
+    font-weight: 700;
+  }
+
+  .spark-visual {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .spark-bar {
+    flex: 1;
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 3px 3px 0 0;
+    transition: height 0.3s ease;
+  }
+
+  .spark-bar.active {
+    background: var(--brand-primary);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  }
+
+  /* CLI Box */
+  .cli-box {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-medium);
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    margin-top: 1rem;
+  }
+
+  .cli-prompt {
+    color: var(--brand-primary);
+    font-weight: 700;
+  }
+
+  .cli-cmd {
+    flex: 1;
+    color: var(--text-highlight);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cli-copy-btn {
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+  }
+
+  .cli-copy-btn:hover {
+    color: var(--text-highlight);
+  }
+
+  .stack-grid-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .stack-badge {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    padding: 0.85rem;
+    border-radius: var(--radius-md);
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .stack-badge:hover {
+    border-color: var(--brand-primary);
+    transform: translateY(-2px);
+  }
+</style>
+
+<script is:inline>
+  const copyBtn = document.getElementById('bento-copy-btn');
+  copyBtn?.addEventListener('click', () => {
+    navigator.clipboard.writeText('npx pulse-engine@latest init --preset=production');
+    copyBtn.innerHTML = '<span style="color:#10b981;font-size:12px;font-weight:700;">Copied!</span>';
+    setTimeout(() => {
+      copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
+    }, 2500);
+  });
+</script>
+

@@ -1,0 +1,197 @@
+---
+// Testimonials.astro
+const testimonials = [
+  {
+    name: "Elena Rostova",
+    role: "VP of Engineering",
+    company: "AetherScale Cloud",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=faces",
+    metric: "72% Faster Releases",
+    content: "Pulse transformed how our 80-engineer team ships code. Concurrency bottlenecks that used to stall our staging environment for days are now detected and refactored before our engineers even open a PR."
+  },
+  {
+    name: "Marcus Vance",
+    role: "Principal Infrastructure Architect",
+    company: "Hyperion Finance",
+    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=faces",
+    metric: "$420k / yr Server Savings",
+    content: "The autonomous AST optimizer tuned our distributed memory allocators down to bare metal. In our first month, our global serverless bill dropped by 38% while our p99 latency dropped to 12ms."
+  },
+  {
+    name: "Sarah Chen",
+    role: "Head of DevOps & Security",
+    company: "Veritas AI Labs",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces",
+    metric: "Zero Deployment Incidents",
+    content: "The confidential enclave isolation was non-negotiable for our SOC2 compliance. Pulse delivers cutting-edge agentic workflows without ever compromising our proprietary IP. It's an indispensable weapon in our stack."
+  },
+  {
+    name: "David Kross",
+    role: "Director of Platform Engineering",
+    company: "NovaPay Global",
+    avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&h=150&fit=crop&crop=faces",
+    metric: "3.5x Weekly PR Merge Rate",
+    content: "Our engineers used to spend Friday afternoons manually fixing migration breakage. Pulse now creates 100% typed, backwards-compatible fixes with full test harnesses automatically."
+  },
+  {
+    name: "Priya Nair",
+    role: "Staff Site Reliability Engineer",
+    company: "Synapse Data Mesh",
+    avatar: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&h=150&fit=crop&crop=faces",
+    metric: "Sub-Second Anomaly Root Cause",
+    content: "When an edge node started dropping packets in Singapore, Pulse's telemetry engine pinpointed the exact commit and race condition within 4 seconds. It practically runs our incident response on autopilot."
+  },
+  {
+    name: "Liam O'Connor",
+    role: "Founder & CTO",
+    company: "Kinetix Robotics",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=faces",
+    metric: "Shipped MVP 2 Months Ahead",
+    content: "As an early-stage startup, having Pulse is like having 5 senior principal architects on our team 24/7. We moved from initial prototype to enterprise-ready production in record time."
+  }
+];
+---
+
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">TESTED & LOVED</span>
+      <h2 class="section-title">Engineers love shipping with mathematical confidence</h2>
+      <p class="section-desc">
+        Hear how global engineering organizations accelerated their deployment velocity and reduced operational headaches.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      {testimonials.map((t) => (
+        <div class="glass-card testimonial-card">
+          <div class="testimonial-header">
+            <div class="stars">★★★★★</div>
+            <span class="metric-badge">{t.metric}</span>
+          </div>
+
+          <p class="testimonial-quote">"{t.content}"</p>
+
+          <div class="author-row">
+            <img class="author-avatar" src={t.avatar} alt={t.name} width="46" height="46" loading="lazy" />
+            <div class="author-meta">
+              <div class="author-name">
+                <span>{t.name}</span>
+                <span class="verified-icon" title="Verified Customer">✓</span>
+              </div>
+              <div class="author-role">{t.role}</div>
+              <div class="author-company">{t.company}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 992px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .stars {
+    color: #fbbf24;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .metric-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--brand-emerald);
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+  }
+
+  .testimonial-quote {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+    font-style: normal;
+  }
+
+  .author-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .author-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--brand-primary);
+  }
+
+  .author-name {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+  }
+
+  .verified-icon {
+    font-size: 0.72rem;
+    background: var(--brand-accent);
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }
+
+  .author-role {
+    font-size: 0.78rem;
+    color: var(--text-primary);
+  }
+
+  .author-company {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+  }
+</style>
+

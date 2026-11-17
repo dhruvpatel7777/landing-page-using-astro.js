@@ -1,0 +1,11 @@
+{
+  "name": "astro-landing-page",
+  "version": "1.0.0",
+  "description": "High-velocity modern SaaS landing page built with Astro.js",
+  "scripts": {
+    "dev": "npm --prefix modern-astro-blog run dev",
+    "build": "npm --prefix modern-astro-blog run build",
+    "preview": "npm --prefix modern-astro-blog run preview"
+  }
+}
+

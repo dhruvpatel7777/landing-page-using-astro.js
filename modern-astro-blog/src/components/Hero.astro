@@ -1,0 +1,747 @@
+---
+// Hero.astro
+---
+
+<section class="hero-section">
+  <!-- Glowing Background Orbs -->
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+
+  <div class="container hero-container">
+    <!-- Announcement Pill -->
+    <div class="announcement-wrapper">
+      <a href="#features" class="announcement-pill">
+        <span class="announcement-tag">NEW v3.4</span>
+        <span class="announcement-text">Next-gen Autonomous AI Pipelines are now live</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="hero-headline">
+      The Autonomous Intelligence Engine for <span class="text-gradient">High-Velocity Engineering</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subhead">
+      Eliminate developer bottlenecks with autonomous AI agents that analyze, refactor, and deploy mission-critical software. Ship 5x faster with verified mathematical certainty.
+    </p>
+
+    <!-- Call to Actions -->
+    <div class="hero-cta-group">
+      <a href="#pricing" class="btn btn-primary btn-lg hero-btn-glow">
+        <span>Start Free 14-Day Trial</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <button type="button" id="open-demo-btn" class="btn btn-secondary btn-lg hero-btn-demo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        <span>Watch Live Demo</span>
+        <span class="demo-length">2 min</span>
+      </button>
+    </div>
+
+    <!-- Social Proof Rating & Avatars -->
+    <div class="hero-social-proof">
+      <div class="avatar-stack">
+        <img class="avatar-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces" alt="Engineer" width="38" height="38" />
+        <img class="avatar-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" alt="Lead Architect" width="38" height="38" />
+        <img class="avatar-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces" alt="Tech Founder" width="38" height="38" />
+        <img class="avatar-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces" alt="Senior DevOps" width="38" height="38" />
+      </div>
+      <div class="rating-info">
+        <div class="stars-row">
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="star">★</span>
+          <span class="rating-score">4.9 / 5.0</span>
+        </div>
+        <p class="rating-sub">Trusted by <strong>45,000+</strong> engineers from fast-growing startups to Fortune 500s</p>
+      </div>
+    </div>
+
+    <!-- Product Showcase Window -->
+    <div class="hero-showcase-wrapper">
+      <!-- Floating Badges -->
+      <div class="floating-pill floating-left">
+        <span class="floating-icon">⚡</span>
+        <div>
+          <div class="floating-title">+340% Build Velocity</div>
+          <div class="floating-subtitle">Autonomous parallel caching</div>
+        </div>
+      </div>
+
+      <div class="floating-pill floating-right">
+        <span class="floating-icon">🛡️</span>
+        <div>
+          <div class="floating-title">Zero Security Flaws</div>
+          <div class="floating-subtitle">Automated formal verification</div>
+        </div>
+      </div>
+
+      <div class="glass-card showcase-window">
+        <!-- Mac-style Window Title Bar -->
+        <div class="window-header">
+          <div class="window-controls">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="window-title">
+            <span class="pulse-dot"></span>
+            <span>pulse-agent-v3.4.cluster-us-east.prod</span>
+          </div>
+          <div class="window-meta">
+            <span class="meta-badge">14ms latency</span>
+            <span class="meta-badge">99.99% SLA</span>
+          </div>
+        </div>
+
+        <!-- Dashboard Content Grid -->
+        <div class="window-body">
+          <!-- Terminal / Realtime Agent Stream -->
+          <div class="terminal-panel">
+            <div class="panel-header">
+              <span class="panel-tab active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+                Autonomous Agent Stream
+              </span>
+              <span class="badge-live">LIVE</span>
+            </div>
+            <div class="terminal-logs">
+              <div class="log-line">
+                <span class="log-time">09:42:01</span>
+                <span class="log-tag tag-info">INFO</span>
+                <span class="log-msg">Neural agent initialized. Inspecting AST for <code class="code-inline">@repo/api-gateway</code>...</span>
+              </div>
+              <div class="log-line">
+                <span class="log-time">09:42:02</span>
+                <span class="log-tag tag-warn">WARN</span>
+                <span class="log-msg text-amber">Detected blocking lock contention in <code class="code-inline">sessionHandler()</code> (L:142)</span>
+              </div>
+              <div class="log-line">
+                <span class="log-time">09:42:03</span>
+                <span class="log-tag tag-success">AUTO-FIX</span>
+                <span class="log-msg text-emerald">Applied non-blocking lockless ring buffer. Simulated throughput: <strong>+342%</strong></span>
+              </div>
+              <div class="log-line">
+                <span class="log-time">09:42:04</span>
+                <span class="log-tag tag-info">TEST</span>
+                <span class="log-msg">Generated 24 concurrency fuzz tests. <strong>All 24 passed</strong> (0 regressions).</span>
+              </div>
+              <div class="log-line active-line">
+                <span class="log-time">09:42:05</span>
+                <span class="log-tag tag-cyan">DEPLOY</span>
+                <span class="log-msg">Rollout canary to 18 global edge clusters in 0.42s...</span>
+                <span class="terminal-cursor"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Cockpit Metrics & Telemetry -->
+          <div class="metrics-panel">
+            <div class="panel-header">
+              <span class="panel-tab active">Telemetry Cockpit</span>
+              <span class="telemetry-ping">Edge: Synced</span>
+            </div>
+            
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-label">Request Throughput</div>
+                <div class="metric-value">2.48M <span class="metric-unit">req/sec</span></div>
+                <div class="metric-trend trend-up">↑ 48.2% vs last week</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Global P99 Latency</div>
+                <div class="metric-value">13.8 <span class="metric-unit">ms</span></div>
+                <div class="metric-trend trend-good">↓ 62% latency reduction</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Autonomous Accuracy</div>
+                <div class="metric-value">99.98 <span class="metric-unit">%</span></div>
+                <div class="metric-trend trend-good">Zero human rollbacks</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Automated Cost Saved</div>
+                <div class="metric-value">$14,280 <span class="metric-unit">/mo</span></div>
+                <div class="metric-trend trend-up">Optimized serverless compute</div>
+              </div>
+            </div>
+
+            <!-- Mini Live Interactive Simulator -->
+            <div class="simulator-box">
+              <div class="sim-header">
+                <span class="sim-title">⚡ Interactive Command Simulation</span>
+                <span class="sim-status">Ready</span>
+              </div>
+              <div class="sim-input-row">
+                <span class="sim-prefix">$ pulse</span>
+                <input type="text" id="hero-sim-input" class="sim-input" value="optimize --target=latency --auto-merge" readonly />
+                <button type="button" id="hero-sim-btn" class="btn btn-primary sim-run-btn">Run Pipeline</button>
+              </div>
+              <div id="sim-feedback" class="sim-feedback">Click "Run Pipeline" to trigger instant simulated autonomous remediation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-glow-1 {
+    top: -100px;
+    left: 20%;
+    background: #6366f1;
+  }
+
+  .hero-glow-2 {
+    top: 50px;
+    right: 15%;
+    background: #06b6d4;
+  }
+
+  [data-theme="light"] .hero-glow {
+    opacity: 0.08;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .announcement-wrapper {
+    margin-bottom: 1.75rem;
+  }
+
+  .announcement-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.35rem 0.85rem 0.35rem 0.45rem;
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    border: 1px solid var(--border-medium);
+    color: var(--text-primary);
+    font-size: 0.86rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .announcement-pill:hover {
+    border-color: var(--brand-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .announcement-tag {
+    background: var(--brand-primary);
+    color: #fff;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+    font-weight: 850;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    color: var(--text-highlight);
+    max-width: 960px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subhead {
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    color: var(--text-secondary);
+    max-width: 740px;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-btn-glow {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.45);
+  }
+
+  .hero-btn-demo {
+    gap: 0.6rem;
+  }
+
+  .demo-length {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .hero-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .avatar-stack {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-primary);
+    margin-left: -10px;
+    object-fit: cover;
+  }
+
+  .avatar-img:first-child {
+    margin-left: 0;
+  }
+
+  .rating-info {
+    text-align: left;
+  }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: #fbbf24;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .rating-score {
+    font-weight: 700;
+    color: var(--text-highlight);
+    font-size: 0.88rem;
+    margin-left: 0.35rem;
+  }
+
+  .rating-sub {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* Product Window Graphic */
+  .hero-showcase-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .floating-pill {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.7rem 1.1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(16px);
+    z-index: 10;
+    text-align: left;
+    transition: transform var(--transition-base);
+  }
+
+  .floating-left {
+    top: 15%;
+    left: -40px;
+    animation: floatSlow 5s ease-in-out infinite;
+  }
+
+  .floating-right {
+    bottom: 12%;
+    right: -40px;
+    animation: floatSlow 6s ease-in-out infinite reverse;
+  }
+
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @media (max-width: 1100px) {
+    .floating-pill {
+      display: none;
+    }
+  }
+
+  .floating-icon {
+    font-size: 1.4rem;
+  }
+
+  .floating-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-highlight);
+  }
+
+  .floating-subtitle {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .showcase-window {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-medium);
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.15);
+  }
+
+  .window-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  [data-theme="light"] .window-header {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .window-controls {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+
+  .dot-red { background: #ef4444; }
+  .dot-yellow { background: #f59e0b; }
+  .dot-green { background: #10b981; }
+
+  .window-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+  }
+
+  .window-meta {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .meta-badge {
+    font-size: 0.72rem;
+    font-family: var(--font-mono);
+    color: var(--brand-accent);
+    background: rgba(6, 182, 212, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .window-body {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    text-align: left;
+  }
+
+  @media (max-width: 860px) {
+    .window-body {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .terminal-panel {
+    background: rgba(10, 15, 28, 0.95);
+    border-right: 1px solid var(--border-subtle);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  [data-theme="light"] .terminal-panel {
+    background: #0f172a;
+    color: #f8fafc;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .panel-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--brand-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-live {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  .terminal-logs {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .log-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: #cbd5e1;
+  }
+
+  .log-time {
+    color: #64748b;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+
+  .log-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.05rem 0.35rem;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .tag-info { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; }
+  .tag-warn { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+  .tag-success { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+  .tag-cyan { background: rgba(6, 182, 212, 0.2); color: #06b6d4; }
+
+  .text-amber { color: #fcd34d; }
+  .text-emerald { color: #34d399; }
+
+  .code-inline {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    color: #f8fafc;
+  }
+
+  .terminal-cursor {
+    display: inline-block;
+    width: 6px;
+    height: 14px;
+    background: var(--brand-accent);
+    margin-left: 4px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Metrics Panel */
+  .metrics-panel {
+    padding: 1.25rem;
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .telemetry-ping {
+    font-size: 0.75rem;
+    color: var(--brand-emerald);
+    font-weight: 600;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .metric-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.85rem;
+  }
+
+  .metric-label {
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.25rem;
+  }
+
+  .metric-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-highlight);
+    line-height: 1.2;
+  }
+
+  .metric-unit {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+
+  .metric-trend {
+    font-size: 0.72rem;
+    margin-top: 0.35rem;
+    font-weight: 600;
+  }
+
+  .trend-up { color: #10b981; }
+  .trend-good { color: var(--brand-accent); }
+
+  /* Interactive Simulator */
+  .simulator-box {
+    margin-top: 0.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    padding: 0.85rem;
+  }
+
+  .sim-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.76rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+  }
+
+  .sim-status {
+    color: var(--brand-emerald);
+  }
+
+  .sim-input-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 0.3rem 0.6rem;
+  }
+
+  .sim-prefix {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--brand-primary);
+    font-weight: 700;
+  }
+
+  .sim-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    outline: none;
+  }
+
+  .sim-run-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+  }
+
+  .sim-feedback {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+    transition: color 0.2s ease;
+  }
+
+  .sim-feedback.success {
+    color: var(--brand-emerald);
+    font-style: normal;
+    font-weight: 600;
+  }
+</style>
+
+<script is:inline>
+  const simBtn = document.getElementById('hero-sim-btn');
+  const simFeedback = document.getElementById('sim-feedback');
+
+  simBtn?.addEventListener('click', () => {
+    if (!simFeedback) return;
+    simFeedback.textContent = '⚡ Analyzing AST graph... Synchronizing 14 microservices... Done in 180ms! (+34% throughput gained)';
+    simFeedback.classList.add('success');
+    simBtn.textContent = '✓ Executed';
+    setTimeout(() => {
+      simBtn.textContent = 'Run Pipeline';
+    }, 3000);
+  });
+</script>
+
